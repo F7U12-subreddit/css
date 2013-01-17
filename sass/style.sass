@@ -37,6 +37,8 @@ body
         color: hsl(0,0%,50%)
         background: lighten($lightblue, 40%)
         +border-top-radius(7px)
+        &:hover
+          color: black
       &.selected
         z-index: 13
         a
@@ -44,10 +46,6 @@ body
           background: white
           z-index: 13
           border-bottom: 1px solid white
-
-
-
-
 
 #sr-header-area
   background: none
@@ -86,4 +84,24 @@ body
 #sr-more-link
   background: none
   right: -50px
+
+#header-bottom-right
+  border-top: 1px solid #004d66
+  border-left: 1px solid #004d66
+  color: gray
+  background: #e8f7fc
+
+  a
+    color: gray !important
+    &:hover
+      color: black !important
+
+  #userbarToggle
+    border-top: 1px solid #004d66
+    border-left: 1px solid #004d66
+    border-bottom: 1px solid #004d66
+    border-right: 1px #e8f7fc
+    color: gray
+    background: #e8f7fc
+    top: -1px
 
