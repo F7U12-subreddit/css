@@ -1,8 +1,89 @@
 // CSS3 helpers
 @import compass/css3
+// Our partials
+@import partials/colors
+
+// Configs
+$support-for-original-webkit-gradients: false // The reddit parser barfs on these
 
 body
   background: url(%%background%%)
   font-family: "Helvetica Neue", arial, Helvetica, sans-serif
   font-size: 10px
+
+// Header
+#header
+  +background(linear-gradient($lightblue, $darkblue))
+  border-bottom: 1px solid darken($darkblue, 20%)
+
+  .redditname
+    text-shadow: 0px 1px 0px lighten($lightblue,10%)
+
+  .tabmenu
+    margin-bottom: 5px
+
+    @for $i from 1 through 12
+      li:nth-child(#{$i})
+        z-index: 13 - $i
+        a
+          z-index: 13 - $i
+
+    li
+      margin: 0 -3px 0 0
+      position: relative
+      a
+        border: 1px solid darken($darkblue, 20%)
+        padding: 5px
+        color: hsl(0,0%,50%)
+        background: lighten($lightblue, 40%)
+        +border-top-radius(7px)
+      &.selected
+        z-index: 13
+        a
+          color: black
+          background: white
+          z-index: 13
+          border-bottom: 1px solid white
+
+
+
+
+
+#sr-header-area
+  background: none
+  border-bottom: 1px solid $darkblue
+  text-transform: capitalize
+  font-size: 10px
+  text-shadow: 0px 1px 0px lighten($lightblue,10%)
+  +box-shadow(0px 1px 0px $lightblue)
+
+  .width-clip
+    margin-right: 50px
+
+  .sr-list
+    .separator
+      color: $darkblue
+
+  .drop-choices
+    background: white
+    border: 1px solid hsl(0,0%,80%)
+    border-top: 0
+    padding: 5px
+    text-shadow: none
+    font-weight: bold
+    +border-bottom-radius(5px)
+
+    a.choice
+      color: black
+      padding: 3px 0
+
+      &:hover
+        +background(linear-gradient($lightblue, $darkblue))
+        padding:
+          left: 7px
+          right: 7px
+        margin: 0 -7px
+#sr-more-link
+  background: none
+  right: -50px
 
