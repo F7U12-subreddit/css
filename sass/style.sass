@@ -105,3 +105,68 @@ body
     background: #e8f7fc
     top: -1px
 
+.side
+  padding: 10px
+  margin-right: 0
+  border: 1px solid black
+  border-top: 0
+  border-right: 0
+  color: $side-gray
+  +border-bottom-left-radius(7px)
+  +background(radial-gradient(bottom, circle, hsl(0,0%,30%), black))
+
+  a
+    color: hsl(210, 50%, 80%)
+
+  .spacer
+    background: transparent
+
+  #search
+    input
+      border: 1px solid hsl(0,0%,50%)
+      background: hsl(0,0%,30%)
+      color: white
+      +border-radius(3px)
+
+    #searchexpando.infobar
+      background-color: hsl(0,0,30%)
+      border: 1px solid hsl(0,0,50%)
+        color: $side-gray
+  .titlebox
+    h1 a
+      color: hsl(0,0,50%)
+    .leavemoderator, .flairtoggle
+      background: transparent
+  .sidecontentbox
+    .title
+      background: hsl(0,0,50%)
+      padding: 5px
+      +border-top-radius(3px)
+
+      h1
+        color: black
+        text-transform: lowercase
+        font-weight: bold
+    .helplink
+      margin-right: 5px
+    .content
+      background-color: hsl(0,0,30%)
+      border: 1px solid hsl(0,0,50%)
+      +border-bottom-radius(3px)
+  .icon-menu
+    a
+      background: transparent
+  .morelink
+    border: 1px solid darken($darkblue,20%)
+    +background(linear-gradient($lightblue, $darkblue))
+    +border-radius(3px)
+
+    a
+      color: darken($darkblue, 20%)
+      text-shadow: 0px 1px 0px $lightblue
+
+    .nub
+      display: none
+
+
+
